@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>tab</title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript" src="jquery1.11.3jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Tab demo</h1>
+		<div class="tab-demo">
+		<div class="tab-control">
+			<div class="button active" data-tab="tab1"> Tab1</div>
+			<div class="button" data-tab="tab2"> Tab1</div>
+			<div class="button" data-tab="tab3"> Tab1</div>
+			<div class="button" data-tab="tab4"> Tab1</div>
+			<div class="clearfix"></div>
+		</div>
+			<div class="tab-content">
+				<div class="tab" id="tab1">
+					<div class="txt-content">
+						Có bao giờ con sóng không xô vào bờ đâu em.
+					</div>
+				</div>
+				<div class="tab" id="tab2">
+					<div class="txt-content">
+						Hằng đêm có những phong thư không gửi cho em.
+					</div>
+				</div>
+				<div class="tab" id="tab3">
+					<div class="txt-content">
+						Hai tay anh ôm xương rồng rất đau, đôi vai anh mang nỗi buồn rất lâu.
+					</div>
+				</div>
+				<div class="tab" id="tab4">
+					<div class="txt-content">
+						Có bao giờ trong mơ vội vã, nhìn không thấy anh em đã đi tìm.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style type="text/css" media="screen">
+	.clearfix{
+		content: "";
+		display: block;
+		visibility: hidden;
+		clear: both;
+	}
+	.tab-demo{
+			border: 1px solid #2C2C2C2C;
+	}
+	.active{
+		background: #007fff;
+		color: #ffffff;
+	}
+		.container{
+			/*text-align: center;*/
+			width: 60%;
+
+		}
+
+		.tab-control{
+			width: 100%;
+			word-spacing: -5px;
+			/*margin: 0 auto;*/
+		}
+		.tab-content{
+			width: 100%;
+			/*margin: 0 auto;*/
+		}
+		.tab-control .button{
+			width: 15%;
+			padding:  10px 20px;
+			float: left;
+			border: 1px solid #2C2C2C2C;
+			margin: 0;
+			word-spacing: 0px;
+		}
+		.tab-content .tab{
+			display: none;
+			padding: 10px;
+			/*text-align: left;*/
+		}
+
+		.tab-control1{
+			width: 100%;
+			word-spacing: -5px;
+			/*margin: 0 auto;*/
+		}
+		.tab-content1{
+			width: 100%;
+			/*margin: 0 auto;*/
+		}
+		.tab-control1 .button{
+			width: 15%;
+			padding:  10px 20px;
+			float: left;
+			border: 1px solid #2C2C2C2C;
+			margin: 0;
+			word-spacing: 0px;
+		}
+		.tab-content1 .tab{
+			display: none;
+			padding: 10px;
+			/*text-align: left;*/
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".tab-content .tab:first").show();
+			$(".tab-control .button").click(function(){
+				$(".tab-control .button").removeClass("active");
+				$(this).addClass("active");
+				$(".tab-content .tab").hide();
+				var url = $(this).attr("data-tab");
+				$("#"+url).fadeIn();
+			});
+		})
+	</script>
+	<div class="container">
+		<div class="tab-control1">
+			<div class="button" data-tab="tab5">Tab1</div>
+			<div class="button" data-tab="tab6">Tab2</div>
+			<div class="button" data-tab="tab7">Tab3</div>
+			<div class="button" data-tab="tab8">Tab4</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="tab-content1">
+			<div class="tab" id="tab5">
+				<div class="txt-content">
+					1
+				</div>
+			</div>
+			<div class="tab" id="tab6">
+				<div class="txt-content">
+					2
+				</div>
+			</div>
+			<div class="tab" id="tab7">
+				<div class="txt-content">
+					3
+				</div>
+			</div>
+			<div class="tab" id="tab8">
+				<div class="txt-content">
+					4
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".tab-content1 .tab:first").show();
+			$(".tab-control1 .button").mouseover(function(){
+				$(".tab-control1 .button").removeClass("active");
+				$(this).addClass("active");
+				$(".tab-content1 .tab").hide();
+				var url = $(this).attr("data-tab");
+				$("#"+url).fadeIn();
+			});
+		})
+	</script>
+</body>
+</html>

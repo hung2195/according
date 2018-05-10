@@ -1,0 +1,22 @@
+.container{
+	text-align: center;
+}
+.hieuung{
+	width: 50%;
+	margin:  0 auto;
+}
+.motkhoi{
+	/* padding: 10px; */
+	border: 1px solid #C2C2C2C2;
+}
+#accordion{
+	text-align: left;
+	background: gray;
+	color: #ffff;
+	padding: 10px 15px;
+	margin: 0;
+}
+.ndmotkhoi{
+	padding: 10px;
+	text-align: left;
+}

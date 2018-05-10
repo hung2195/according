@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>tab1</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div class="container">
+		<h3>Tab demo</h3>
+		<div class="tab-demo">
+		<div class="tab-control">
+			<div class="button active" data-tab="tab1">Tab1</div>
+			<div class="button" data-tab="tab2">Tab2</div>
+			<div class="button" data-tab="tab3">Tab3</div>
+			<div class="button" data-tab="tab4">Tab4</div>
+			<div class="clearfix"></div>
+		<div class="tab-content">
+			<div class="tab" id="tab1">
+				<div class="txt-content">
+					<span>Có lẽ nào e vội quên đi.<br/>Có lẽ nào e vội quên đi.</span>
+				</div>
+			</div>
+			<div class="tab" id="tab2">
+				<div class="txt-content">
+					<span>Ngày em đi lòng anh tự đông.<br/>Giá băng theo chiều tan màu mưa.</span>
+				</div>
+			</div>
+			<div class="tab" id="tab3">
+				<div class="txt-content">
+					<span>Có bao giờ con sóng không xô vào bờ đâu em.<br/>Có lẽ nào e vội quên đi.</span>
+				</div>
+			</div>
+			<div class="tab" id="tab4">
+				<div class="txt-content">
+					<span>Khi xưa biệt ly người đã nói sẽ mãi đợi anh.<br/>Có lẽ nào e vội quên đi.</span>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<style type="text/css" media="screen">
+		.container{
+			width: 60%;
+			margin: 0 auto;
+		}
+		.clearfix{
+			content: "";
+			clear: both;
+			display: block;
+			visibility: hidden;
+		}
+		.tab-demo{
+			border:1px solid #2C2C2C2C ;
+		}
+		h3{
+			text-align: center;
+		}
+		.tab-control .button{
+			text-align: center;
+			padding: 10px;
+			width: 15%;
+			float: left;
+			border: 1px solid #2C2C2C2C;
+		}
+		.tab-content .tab{
+			padding: 10px;
+			display: none;
+		}
+		.active{
+			background: gray;
+			color: #ffff;
+		}
+		
+	</style>
+	<script type="text/javascript" src="jquery1.11.3jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".tab-content .tab:first").show();
+			$(".tab-control .button").click(function(){
+				$(".tab-control .button").removeClass("active");
+				$(this).addClass("active");
+				$(".tab-content .tab").hide();
+				var url = $(this).attr("data-tab");
+				$("#"+url).show();
+			})
+		})
+	</script>
+
+</body>
+</html>

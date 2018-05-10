@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div class="container">
+		<h1>Accordion</h1>
+		<h3>Accordion demo</h3>
+		<div class="group">
+			<h3>Selector1</h3>
+			<div class="group-content">
+				<span>một nụ hôn cuối rồi tạm biệt nhau ngày mai mình sẽ mất nhau thật rồi.</span>
+			</div>
+		</div>
+		<div class="group">
+			<h3>Selector2</h3>
+			<div class="group-content">
+				<span>một nụ hôn cuối rồi tạm biệt nhau ngày mai mình sẽ mất nhau thật rồi.</span>
+			</div>
+		</div>
+		<div class="group">
+			<h3>Selector3</h3>
+			<div class="group-content">
+				<span>một nụ hôn cuối rồi tạm biệt nhau ngày mai mình sẽ mất nhau thật rồi.</span>
+			</div>
+		</div>
+	</div>
+	<style type="text/css" media="screen">
+		.container{
+			text-align: center;
+		}
+		.group{
+			width:60%;
+			margin: 0 auto;
+			border: 1px solid #C2C2C2C2;
+
+		}
+		.group h3{
+			padding: 10px;
+			color: #ffffff;
+			background: #C2C2C2C2;
+			text-align: left;
+			margin: 0;
+			border: 1px solid #ffff;
+		}
+		.group-content{
+			padding: 10px;
+			text-align: left;
+		}
+		
+	</style>
+	<script type="text/javascript" src="jquery1.11.3jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var acc = $(".group-content");
+			acc.hide();
+			$(".group h3").click(function(){
+				acc.slideUp();
+				$(this).parent().find(".group-content").slideDown("400");
+				// return false;
+			})
+			
+		})
+	</script>
+</body>
+</html>

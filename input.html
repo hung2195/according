@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="witdh=deive-witdh, innitial-scale=1.0">
+	<title>input</title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript" src="jquery1.11.3jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<input type="text" name="" value="" placeholder="input a munber" id="num">
+		<button type="" id="btncheck">Check</button>
+		<blink><p id="date"></p></blink> 
+		<p id="num-demo"></p>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btncheck").click(function(){
+			// var num = document.getElementById("num").value;
+			var num1 = $("#num").val();
+				if(num1 % 2 == 0){
+				alert("day la so chan"+num1);
+			}else{
+				alert("day la so le");
+			};
+			var flag=true;
+			if(num1 < 2)
+			{
+				document.getElementById("num-demo").innerHTML="Khong phai la so nguyen to";
+				document.getElementById("btncheck").style.height ='100px';
+			}
+			else if (num1 == 2) {
+				document.getElementById("num-demo").innerHTML="day la so nguyen to";
+			}
+			else {
+				for (var i = 3; i < num1-1; i+=2) {
+					if(num1 % i == 0)
+					{
+						flag=false;
+						break;
+					}
+					
+				}
+			}
+			if(flag == true)
+			{
+				document.getElementById("num-demo").innerHTML="Day la so nguyen to";
+			}
+			else{
+				document.getElementById("num-demo").innerHTML="khon phai la so nguyen to";
+			}
+
+
+		});
+			var d = Date();
+			document.getElementById("date").innerHTML = d.toString();
+			
+		})
+	</script>
+</body>
+</html>
