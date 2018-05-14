@@ -3,3 +3,8 @@ position: absolute;
 transform: translate(-50%,-50%);
 top: 50%;
 left: 50%;
+
+img{
+	margin:0px; padding: 0px; float: left;border:0px;
+}
+// del margin img
