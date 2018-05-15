@@ -3,8 +3,21 @@ position: absolute;
 transform: translate(-50%,-50%);
 top: 50%;
 left: 50%;
-
+//position 50%
 img{
 	margin:0px; padding: 0px; float: left;border:0px;
 }
 // del margin img
+
+var navbar = document.getElementById("header");
+		var sticky = navbar.offsetTop;
+		var fixedside= $('#sidenav');
+
+		$(window).scroll(function(){
+		if (window.pageYOffset >= 100) {
+			fixedside.addClass("scroll");
+		} else {
+			fixedside.removeClass("scroll");
+			}
+		})
+// fixed navbar scroll
