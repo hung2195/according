@@ -21,3 +21,16 @@ var navbar = document.getElementById("header");
 			}
 		})
 // fixed navbar scroll
+
+
+$('.listNews .item').hover(function() {
+            let url = $(this).find('.btnNewsM');
+            $(this).css('border', '5px solid #12a5eb');
+            url.attr('src', url.attr('src').replace('-ovoff', '-ovon'));
+        }, function() {
+            let url = $(this).find('.btnNewsM');
+            $(this).css('border', '5px solid #edecea');
+            url.attr('src', url.attr('src').replace('-ovon', '-ovoff'));
+        });
+
+// hover d?i hình
