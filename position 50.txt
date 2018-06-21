@@ -34,6 +34,7 @@ $('.listNews .item').hover(function() {
         });
 
 // hover d?i hình
+<<<<<<< HEAD
  $('a[href^="#"]').click(function() {
         var postID = $(this).attr("href");
         $('html, body').animate({
@@ -42,3 +43,23 @@ $('.listNews .item').hover(function() {
         return false;
     });
 // ancholink
+=======
+
+
+.shape{
+		    width: 0px;
+		    height: 43px;
+		    border-left: 190px solid #c32424;
+		    border-top: 44px solid transparent;
+		    border-bottom: 100px solid #c32424;s
+		}
+
+		.circle{
+			width: 200px;
+			height: 50px;
+			background: red;
+			border-radius: 50%;
+			border-bottom: 150px solid blue;
+		}
+// shape 
+>>>>>>> 70c5c847d5b3a133cacc00c69c6a6abf3ed05287
