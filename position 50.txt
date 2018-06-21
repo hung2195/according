@@ -34,3 +34,11 @@ $('.listNews .item').hover(function() {
         });
 
 // hover d?i hình
+ $('a[href^="#"]').click(function() {
+        var postID = $(this).attr("href");
+        $('html, body').animate({
+            scrollTop: $(postID).offset().top
+        }, 1000);
+        return false;
+    });
+// ancholink

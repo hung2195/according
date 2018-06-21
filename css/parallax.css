@@ -1,0 +1,12 @@
+.section01 {
+  background: url("../img/slide03.jpg") no-repeat 50% 0 fixed;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evelyn;
+  -ms-flex-pack: space-evelyn;
+  justify-content: space-evelyn; }
+  .section01 .txt-content01 {
+    width: 300px;
+    margin: 50px; }
